@@ -20,4 +20,9 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
-
+// fermer modale 1
+let span = document.getElementsByClassName('close')[0];
+span.addEventListener('click', closeModal);
+  function closeModal(e) {
+    modalbg.style.display = "none";
+}
