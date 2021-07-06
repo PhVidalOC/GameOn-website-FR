@@ -45,6 +45,18 @@ function validate(event) {
   } else {
     hideError(last);
   }
+
+  // verif_email
+  const email = document.getElementById("email");
+  let emailRegExp = new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g');
+  let testEmail = emailRegExp.test(email.value);
+  if (testEmail) {
+    hideError(email);
+  }
+  else {
+    showError(email, 'adresse de messagerie non correcte');
+  }
+  
   
   function showError(input, errorMsg){
     input.parentElement.setAttribute("data-error-visible", "true");
