@@ -45,14 +45,14 @@ function validate(event) {
   } else {
     hideError(last);
   }
-}
+  
+  function showError(input, errorMsg){
+    input.parentElement.setAttribute("data-error-visible", "true");
+    input.parentElement.setAttribute("data-error", errorMsg)
+  }
 
-function showError(input, errorMsg){
-  input.parentElement.setAttribute("data-error-visible", "true");
-  input.parentElement.setAttribute("data-error", errorMsg)
-}
-
-function hideError(input){
-  input.parentElement.setAttribute("data-error-visible", "false");
-  input.parentElement.setAttribute("data-error", "")
+  function hideError(input){
+    input.parentElement.setAttribute("data-error-visible", "false");
+    input.parentElement.setAttribute("data-error", "")
+  }
 }
