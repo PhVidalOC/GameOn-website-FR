@@ -26,3 +26,33 @@ span.addEventListener('click', closeModal);
   function closeModal(e) {
     modalbg.style.display = "none";
 }
+
+
+// Formulaire 2
+document.getElementById("form").addEventListener("submit", validate);
+function validate(event) {
+  event.preventDefault();
+  const first = document.getElementById("first");
+  if (first.value.length < 2) {
+    showError(first, 'le prénom doit avoir 2 lettres minimum');
+  } else {
+    hideError(first);
+  }
+
+  const last = document.getElementById("last");
+  if (last.value.length < 2) {
+    showError(last, 'le nom doit avoir 2 lettres minimum');
+  } else {
+    hideError(last);
+  }
+}
+
+function showError(input, errorMsg){
+  input.parentElement.setAttribute("data-error-visible", "true");
+  input.parentElement.setAttribute("data-error", errorMsg)
+}
+
+function hideError(input){
+  input.parentElement.setAttribute("data-error-visible", "false");
+  input.parentElement.setAttribute("data-error", "")
+}
