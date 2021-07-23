@@ -522,7 +522,9 @@ footer {
   font-weight: normal;
   color: #f00;
 }
-
+#succes {
+  display: none;
+}
 
 @keyframes modalopen {
   from {
