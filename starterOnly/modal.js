@@ -25,6 +25,9 @@ function launchModal() {
  * Ajout de la fonctionnalitée pour fermer la modale en cliquantsur la "X".
  */
 let span = document.getElementsByClassName("close")[0];
+let closeBtn = document.getElementsByClassName("close-btn")[0];
+
+closeBtn.addEventListener("click", closeModal);
 span.addEventListener("click", closeModal);
 function closeModal(e) {
   modalbg.style.display = "none";

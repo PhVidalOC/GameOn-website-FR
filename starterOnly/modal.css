@@ -184,9 +184,46 @@ main {
 }
 
 .modal-body {
+  /* display: flex;
+  align-items: flex-end; */
   padding: 15px 8%;
   margin: 15px auto;
 }
+
+#succes {
+  display: flex;
+  
+  align-items: flex-end;
+  width: 414px;
+  height: 653px;
+  margin-bottom: 21px;
+}
+
+.text-succes{
+  text-align: center;
+  /* height: 100px; */
+  padding-top: 275px;
+  padding-bottom: 275px;
+  text-align: center;
+}
+
+.close-btn {
+  background: #fe142f;
+  display: block;
+  /* margin :auto; */
+  /* margin-top: 250px; */
+
+  margin: 0 auto;
+  margin-bottom: 21px;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+
 
 label {
   font-family: var(--font-default);
